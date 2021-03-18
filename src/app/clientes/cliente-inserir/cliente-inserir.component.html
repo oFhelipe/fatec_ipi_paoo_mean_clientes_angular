@@ -1,0 +1,17 @@
+<mat-card>
+  <form (submit)="onAdicionarCliente(clienteForm)" #clienteForm="ngForm">
+    <mat-form-field>
+      <input type="text" required matInput placeholder="Nome" name="nome" #nome="ngModel" ngModel>
+      <mat-error *ngIf="nome.invalid">Digite um nome valido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" required matInput placeholder="Telefone" name="fone" ngModel>
+      <mat-error>Digite um telefone valido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" required matInput placeholder="Email" name="email" ngModel>
+      <mat-error>Digite um email valido</mat-error>
+    </mat-form-field>
+    <button color="primary" mat-raised-button>Inserir Cliente</button>
+  </form>
+</mat-card>
